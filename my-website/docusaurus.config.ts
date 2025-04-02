@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: "Ink's SITE",
+  tagline: 'Place my codes here!',
+  favicon: 'img/avatar.jpg',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'twj-ink', // Usually your GitHub org/user name.
+  projectName: 'my-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -66,12 +66,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: '/static/img/avatar.jpg',
     navbar: {
-      title: 'My Site',
+      title: "Ink's Site",
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: '/static/img/avatar.jpg',
       },
       items: [
         {
@@ -80,9 +80,22 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+
         {
-          href: 'https://github.com/facebook/docusaurus',
+			to: '/blog',
+			label: 'Blog',
+			position: 'left'
+		},
+
+		{
+		  type:'docSidebar',
+		  sidebarId: 'dsaSidebar',
+		  position: 'left',
+		  label: '数据结构与算法',
+		},
+
+        {
+          href: 'https://github.com/twj-ink',
           label: 'GitHub',
           position: 'right',
         },
@@ -92,11 +105,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Github',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'twj-ink',
+              to: 'https://github.com/twj-ink',
             },
           ],
         },
